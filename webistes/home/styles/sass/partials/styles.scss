@@ -1,0 +1,335 @@
+@use "./setup";
+@use "./colors" as *;
+@use "./typography" as *;
+
+html {
+    font-size: 62.5%;
+/* basic font size = 10px */
+}
+
+// .wrapper {
+//     max-width: 1980px;
+//     width: 90%;
+//     margin: auto;
+// }
+
+.wrapper {
+    width: min(80%,1500px);
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: "Josefin Sans";
+}
+
+header {
+    background: url(../../../assets/home-header.jpg);
+    // height: 1000px;
+    // background-size: cover;
+    // position: relative;
+    height: 800px;
+    background-size: cover;
+    position: relative;
+}
+
+ul,
+li,
+h2 {
+    margin: 0;
+}
+
+.upperNav {
+    margin-top: 0;
+    ul {
+        padding-left: 1rem;
+        padding-top: 5rem;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        a {
+            text-transform: capitalize;
+            text-decoration: none;
+            color: $whiteR;
+            font-size: 2rem;
+            font-weight: 550;
+            background-color: $almostBlack;
+            &:hover {
+                border-bottom: 2px solid $sunYellow;
+            }
+        }
+    }
+}
+
+.upperNav .homeLine {
+    border-bottom: 2px solid $sunYellow;
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    line-height: 6.9rem;
+    color: $whiteR;
+    font-family: "Josefin Sans";
+    font-weight: 600;
+    font-size: 6.9rem;
+    margin: 0;
+    span {
+        background-color: $whiteR;
+        color: $britGrey;
+        width: fit-content;
+    }
+}
+
+h2 {
+    font-family: "Josefin Sans";
+    font-size: 45px;
+    color: $sunYellow;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+p {
+    font-family: "Barolow";
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 20px;
+}
+
+a {
+    font-family: "Josefin Sans";
+    line-height: 59px;
+    font-size: 25px;
+    letter-spacing: 0.8px;    
+    text-transform: uppercase;
+    color: $whiteR;
+    text-decoration: none;
+    background-color: $blackR;
+    padding: 1.1rem;
+    white-space: nowrap;
+}
+
+.imageContainer1 {
+    position: absolute;
+    max-width: 50%;
+    // height: 40%;
+    height: 62%;
+    right: 0%;
+    bottom: 0;
+}
+
+.imageContainer1 img {
+    width: 100%;
+    display: block;
+}
+
+section {
+    background: $pine;
+    color: $whiteR;
+    padding-block: 5rem;
+}
+
+.infoCards .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.infoCards h2 {
+    font-family: "Josefin Sans";
+    font-size: 45px;
+    text-transform: uppercase;
+    margin: 0;
+    padding-left: 2rem;
+}
+
+.infoCards p {
+    font-family: "Barolow";
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 20px;
+}
+
+.infoCards ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 22rem;
+    padding-bottom: 10rem;
+}
+
+.infoCards ul li {
+    list-style: none;
+    flex-direction: row;
+    width: 45%;
+    flex-wrap: nowrap;
+    display: flex;
+    margin-left: 48px;
+}
+
+.iconHolder {
+    width: 5rem;
+    height: 5rem;
+    background: $sunYellow;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconHolder img {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.contentCard {
+    width: 60rem;
+
+}
+
+header h1 {
+    padding-block: 5rem;
+    p { 
+        font-size: 6rem;
+        
+    }
+}
+
+// <!-- SECTION 2 FOOD SHOWCASE -->
+
+.bestAndNew {
+    background: $almostBlack;
+    position: relative;
+}
+
+.foodMenuBurger {
+    display: flex;
+}
+
+.foodMenuSalad {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 10rem;
+}
+
+.bestBurgersContent {
+    text-align: left;
+    padding-left: 10rem;
+    width: 60%;
+}
+
+.bestBurgersImg {
+    height: auto;
+    display: block;
+    box-shadow: 2rem 2rem #FFD300;
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+
+.somethingNewContent {
+    text-align: right;
+    padding-right: 10rem;
+    width: 60%;
+}
+
+.somethingNewImg {
+    height: auto;
+    display: block;
+    box-shadow: -2rem 2rem #FFD300;
+}
+
+// <!-- SECTION 2 FOOD SHOWCASE -->
+
+// <!-- SECTION 3 PROMOTION SHOWCASE -->
+
+.promotionGC {
+    text-align: center;
+    p {
+        text-align: left;
+    }
+}
+
+// <!-- SECTION 3 END -->
+
+// <!-- SECTION 4 BANNER  -->
+
+section.banner {
+    background-image: url(/assets/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+}
+
+// <!-- SECTION 4 END -->
+
+// <!-- SECTION 5 INTERIOR SHOWCASE -->
+
+.natureSpace {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.natureImg {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: -2.1rem 2.1rem $sunYellow;
+}
+
+.natureSpaceContent {
+    padding-left: 10rem;
+}
+
+//  <!-- SECTION 5 END-->
+
+// <!-- SECTION 6 GALLERY -->
+
+.gallery {
+    background: $almostBlack;
+}
+
+.gallery ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.gallery li {
+    list-style: none;
+    flex-basis: 33%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+// <!-- SECTION 6 END -->
+
+// <!-- FOOTER -->
+
+footer {
+    background: $blackR;
+    color: $whiteR;
+    margin: 0;
+    text-align: center;
+    font-size: large;
+}
+
+footer p {
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 0;
+    line-height: 2.8rem;
+    padding-block: 2rem;
+}
+
+// <!-- FOOTER END -->
